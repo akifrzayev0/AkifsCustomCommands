@@ -1,0 +1,17 @@
+# =============================================================
+#  data.yml - generated automatically by AkifsCustomCommands.
+#  This file is for reference only. Manual edits are discouraged.
+# =============================================================
+
+players:
+  "00000000-0000-0000-0000-000000000000":
+    name: "Akif"
+    commands:
+      freevip:
+        used: 1
+        last-used: 1710000000
+
+commands:
+  freevip:
+    total-used: 5
+    created-at: 1710000000
