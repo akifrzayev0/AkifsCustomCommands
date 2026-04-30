@@ -102,6 +102,29 @@ target/AkifsCustomCommands-1.0.0.jar
    - `plugins/AkifsCustomCommands/languages/tr.yml`
 3. Edit `config.yml` (prefix, language, custom commands) and run `/cac reload`.
 
+## Public broadcast on success
+
+Every custom command can have a `broadcast:` list. Each line is sent to every online player (and mirrored to console) the moment a player successfully runs the command. Color codes and placeholders work everywhere, and an empty list keeps the command silent.
+
+```yaml
+freevip:
+  broadcast:
+    - "&8&m-------------------------------------"
+    - "&a&l%player_name% &eused &6/%command% &eand earned &a7 days of VIP!"
+    - "&7Try it yourself by typing &e/%command%&7!"
+    - "&8&m-------------------------------------"
+```
+
+Manage broadcast lines without editing YAML:
+
+```
+/cac addbcast freevip &a%player_name% just got 7-day VIP! Type /freevip to grab one too.
+/cac removebcast freevip 0
+/cac clearbcast freevip
+```
+
+`/cac info <command>` lists every configured broadcast line with its index.
+
 ## Customising the prefix
 
 `config.yml` controls everything:
@@ -156,6 +179,9 @@ Players run `/freevip` and, if every check passes, the three console commands ar
 | `/cac resetplayer <player> <command>` | Reset a single player's usage |
 | `/cac addcmd <command> <console-cmd>` | Append a console command |
 | `/cac removecmd <command> <index>` | Remove a console command (0-based index) |
+| `/cac addbcast <command> <message>` | Append a public broadcast line that every online player sees |
+| `/cac removebcast <command> <index>` | Remove a broadcast line (0-based index) |
+| `/cac clearbcast <command>` | Remove every broadcast line (the command becomes silent) |
 | `/cac setlimit <command> <amount>` | Total usage limit (`-1` = unlimited) |
 | `/cac setplayerlimit <command> <amount>` | Per-player limit (`-1` = unlimited) |
 | `/cac setcooldown <command> <seconds>` | Cooldown in seconds (`0` disables it) |
