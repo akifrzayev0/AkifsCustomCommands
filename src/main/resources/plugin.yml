@@ -1,0 +1,17 @@
+name: AkifsCustomCommands
+version: ${project.version}
+main: me.akif.customcommands.AkifsCustomCommands
+api-version: "1.18"
+author: Akif
+description: Create your own reward commands with limits, cooldowns and full localization.
+
+commands:
+  cac:
+    description: Main admin command for AkifsCustomCommands.
+    usage: /cac <reload|list|info|create|delete|enable|disable|reset|resetplayer|addcmd|removecmd|setlimit|setplayerlimit|setcooldown|setduration|setperm>
+    aliases: [akifscustomcommands, customcommands, customakifscommands]
+
+permissions:
+  akifscustomcommands.admin:
+    description: Allows access to the AkifsCustomCommands admin command.
+    default: op

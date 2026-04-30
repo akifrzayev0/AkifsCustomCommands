@@ -1,0 +1,84 @@
+# =============================================================
+#  AkifsCustomCommands - Main configuration
+# =============================================================
+#  This file controls the global plugin behaviour only.
+#
+#  Custom command definitions live in commands.yml so that this
+#  file stays small and easy to edit. Translatable, user-facing
+#  messages live in the languages/ folder.
+# =============================================================
+
+# Active language. The plugin will load languages/<language>.yml
+# from the plugin folder. If the file is missing it falls back to en.yml.
+language: en
+
+# Prefix prepended to every chat / console message printed by the plugin.
+#
+# Three color systems are supported (1.16+):
+#   1. Legacy codes:  &a, &c, &l, &n ...
+#   2. Hex codes:     &#RRGGBB
+#   3. Gradients:     <gradient:#RRGGBB:#RRGGBB>text</gradient>
+#                     (format codes &l, &n, &o ... work inside)
+#
+# A few examples - copy any of these into the prefix value:
+#   "&#3FFF5C&lAkifsCustomCommands &8» &r"
+#   "<gradient:#3FFF5C:#5CC8FF>&lAkifsCustomCommands</gradient> &8» &r"
+#   "<gradient:#FFE45C:#FF6B6B>&lShop</gradient> &8• &r"
+#   "<gradient:#7C4DFF:#FF6BFF>&lVIP</gradient> &8› &r"
+prefix: "<gradient:#3FFF5C:#5CC8FF>&lAkifsCustomCommands</gradient> &8» &r"
+
+# When true, the plugin uses the prefix above for its own console
+# logs as well, replacing the default "[AkifsCustomCommands]" tag.
+# When false, plain Bukkit logger output is used instead.
+use-prefix-in-console: true
+
+# Whether actions like "player used /freevip" or executed console
+# commands should be written to the console.
+log-actions: true
+
+# =============================================================
+#  Discord webhook
+# =============================================================
+#  When a player runs a custom command successfully, the plugin
+#  can post a rich embed to a Discord webhook so admins / players
+#  can see who got what reward and when.
+#
+#  Embed labels (Player / Command / Time / Reward / Title) come
+#  from the active language file, so changing `language` above
+#  also changes the language of the webhook message.
+#
+#  Available placeholders inside webhook URL/avatar/thumbnail/
+#  username, the reward text and embed strings:
+#    %player_name%, %player_uuid%, %player_displayname%
+#    %command%       - name of the custom command
+#    %reward%        - reward text from commands.yml
+#                      (also configurable via /cac setreward)
+#    %time%          - timestamp formatted via discord.embed.time-format
+# =============================================================
+discord:
+  # Master switch. Leave false until you have a webhook URL.
+  enabled: false
+
+  # Discord webhook URL. Get it from: Server settings -> Integrations
+  # -> Webhooks -> New Webhook -> Copy URL.
+  webhook-url: ""
+
+  # Username and avatar shown next to the embed in Discord.
+  # Leave empty to use the webhook's default settings.
+  username: "AkifsCustomCommands"
+  avatar-url: ""
+
+  # Skin head shown as the embed thumbnail. Defaults to mc-heads.net.
+  # Other options:
+  #   https://crafatar.com/avatars/%player_uuid%?size=128&overlay=true
+  #   https://minotar.net/helm/%player_name%/128.png
+  #   https://mc-heads.net/avatar/%player_name%/128
+  thumbnail-url: "https://mc-heads.net/avatar/%player_uuid%/128"
+
+  # Hex color for the left side bar of the embed.
+  embed-color: "#3FFF5C"
+
+  # When true, the embed is rendered with Discord's native timestamp
+  # at the bottom (uses the server's clock). When false, only the
+  # %time% placeholder in the language file is shown.
+  timestamp: true

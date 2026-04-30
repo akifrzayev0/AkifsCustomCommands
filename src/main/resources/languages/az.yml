@@ -1,0 +1,136 @@
+﻿# =============================================================
+#  AkifsCustomCommands - Azerbaijani translation
+# =============================================================
+#  Aktivləşdirmək üçün config.yml-də "language: az" yazın.
+#  Hex kodlar (1.16+): &#RRGGBB
+# =============================================================
+
+admin:
+  help-hint: "&#A0A0A0Bütün komandaları görmək üçün &#FFE45C/cac help &#A0A0A0yaz."
+  no-permission: "&#FF6B6BBu komandanı istifadə etmək üçün icazən yoxdur."
+  player-only: "&#FF6B6BBu komandanı yalnız oyunçu istifadə edə bilər."
+  unknown-subcommand: "&#FF6B6BNaməlum alt komanda. &#FFE45C/cac help &#FF6B6Byaz."
+  command-not-found: "&#FF6B6BBelə xüsusi komanda tapılmadı: &#FFE45C%command%"
+  command-already-exists: "&#FF6B6BBu adda xüsusi komanda artıq mövcuddur: &#FFE45C%command%"
+  command-created: "&#3FFF5CXüsusi komanda yaradıldı: &#FFE45C/%command%"
+  command-deleted: "&#3FFF5CXüsusi komanda silindi: &#FFE45C%command%"
+  command-enabled: "&#3FFF5CXüsusi komanda aktiv edildi: &#FFE45C%command%"
+  command-disabled: "&#FFE45CXüsusi komanda deaktiv edildi: &#FFE45C%command%"
+  command-reset: "&#3FFF5CBu komandanın bütün istifadə datası sıfırlandı: &#FFE45C%command%"
+  player-reset: "&#3FFF5C%player% &#3FFF5Coyunçusunun &#FFE45C%command% &#3FFF5Cüçün datası sıfırlandı."
+  console-cmd-added: "&#3FFF5C%command% komandasına yeni console əmri əlavə edildi."
+  console-cmd-removed: "&#3FFF5CSeçilmiş console əmri silindi."
+  broadcast-added: "&#3FFF5C%command% komandasına yeni broadcast sətri əlavə edildi."
+  broadcast-removed: "&#3FFF5CSeçilmiş broadcast sətri silindi."
+  broadcast-cleared: "&#3FFF5C%command% komandasının bütün broadcast sətrləri silindi."
+  invalid-index: "&#FF6B6BYanlış index. Belə bir element yoxdur."
+  invalid-number: "&#FF6B6BMüvafiq ədəd daxil et."
+  invalid-name: "&#FF6B6BKomanda adı yalnız hərflər, rəqəmlər və _ ehtiva edə bilər."
+  reload-success: "&#3FFF5CConfig və data faylları yenidən yükləndi."
+  language-loaded: "&#3FFF5CDil faylı yükləndi: &#FFE45C%language%.yml"
+  limit-set: "&#3FFF5C%command% &#3FFF5Cüçün ümumi limit &#FFE45C%amount% &#3FFF5Colaraq təyin edildi."
+  player-limit-set: "&#3FFF5C%command% &#3FFF5Cüçün oyunçu başına limit &#FFE45C%amount% &#3FFF5Colaraq təyin edildi."
+  cooldown-set: "&#3FFF5C%command% &#3FFF5Cüçün cooldown &#FFE45C%duration% &#3FFF5Colaraq təyin edildi."
+  duration-set: "&#3FFF5C%command% &#3FFF5Cüçün aktiv müddət &#FFE45C%duration% &#3FFF5Colaraq təyin edildi."
+  permission-set: "&#3FFF5C%command% &#3FFF5Cüçün permission &#FFE45C%permission% &#3FFF5Colaraq təyin edildi."
+  permission-cleared: "&#3FFF5C%command% &#3FFF5Cartıq permission tələb etmir."
+  webhook-disabled: "&#FF6B6BDiscord webhook deaktivdir. config.yml-də &#FFE45Cdiscord.enabled: true &#FF6B6Byaz."
+  webhook-not-configured: "&#FF6B6BDiscord webhook URL-i boşdur. &#FFE45Cconfig.yml &#FF6B6Bdə &#FFE45Cdiscord.webhook-url &#FF6B6Btəyin et."
+  webhook-test-sent: "&#3FFF5C%command% &#3FFF5Cüçün test webhook göndərildi."
+  webhook-failed: "&#FF6B6BWebhook çatdırılmadı: &#FFE45C%error%"
+
+help:
+  - "&8&m                                                 "
+  - "&r <gradient:#3FFF5C:#5CC8FF>&lAkifsCustomCommands</gradient> &#A0A0A0— &fAdmin paneli"
+  - "&8&m                                                 "
+  - "&#FFE45C/cac help &#A0A0A0— Bu kömək menyusu"
+  - "&#FFE45C/cac reload &#A0A0A0— Config və datanı yenidən yüklə"
+  - "&#FFE45C/cac list &#A0A0A0— Bütün xüsusi komandaları göstər"
+  - "&#FFE45C/cac info <command> &#A0A0A0— Komanda haqqında məlumat"
+  - "&#FFE45C/cac create <command> &#A0A0A0— Yeni xüsusi komanda yarat"
+  - "&#FFE45C/cac delete <command> &#A0A0A0— Xüsusi komandanı sil"
+  - "&#FFE45C/cac enable|disable <command> &#A0A0A0— Komandanı aktiv/deaktiv et"
+  - "&#FFE45C/cac reset <command> &#A0A0A0— Komandanın istifadə datasını sıfırla"
+  - "&#FFE45C/cac resetplayer <player> <command> &#A0A0A0— Oyunçunun datasını sıfırla"
+  - "&#FFE45C/cac addcmd <command> <console-cmd> &#A0A0A0— Console əmri əlavə et"
+  - "&#FFE45C/cac removecmd <command> <index> &#A0A0A0— Console əmri sil"
+  - "&#FFE45C/cac addbcast <command> <mesaj> &#A0A0A0— Hamı görəcək broadcast sətri əlavə et"
+  - "&#FFE45C/cac removebcast <command> <index> &#A0A0A0— Broadcast sətri sil"
+  - "&#FFE45C/cac clearbcast <command> &#A0A0A0— Bütün broadcast sətrlərini sil"
+  - "&#FFE45C/cac setlimit <command> <amount> &#A0A0A0— Ümumi limit"
+  - "&#FFE45C/cac setplayerlimit <command> <amount> &#A0A0A0— Oyunçu başına limit"
+  - "&#FFE45C/cac setcooldown <command> <müddət> &#A0A0A0— Cooldown (məs. &f30s, 5m, 1h, 7d&#A0A0A0)"
+  - "&#FFE45C/cac setduration <command> <müddət> &#A0A0A0— Aktiv müddət (məs. &f1h, 7d, 30d&#A0A0A0)"
+  - "&#FFE45C/cac setperm <command> [permission] &#A0A0A0— Permission təyin et / sil"
+  - "&#FFE45C/cac testwebhook <command> [oyunçu] &#A0A0A0— Discord-a test embed göndər"
+  - "&8&m                                                 "
+
+info:
+  header: "&8&m                                                 "
+  command-line: "<gradient:#3FFF5C:#5CC8FF>&lKomanda:</gradient> &#FFE45C/%command%"
+  status-line: "&#A0A0A0Status: %status%"
+  status-enabled: "&#3FFF5C&laktiv"
+  status-disabled: "&#FF6B6B&ldeaktiv"
+  status-expired: "&#888888müddəti bitib"
+  permission-line: "&#A0A0A0Permission: &f%permission%"
+  permission-none: "&#888888(yoxdur)"
+  total-usage-line: "&#A0A0A0Ümumi istifadə: &f%used% &#888888/ &f%limit%"
+  player-limit-line: "&#A0A0A0Oyunçu başına limit: &f%limit%"
+  cooldown-line: "&#A0A0A0Cooldown: &f%cooldown%"
+  duration-line: "&#A0A0A0Aktiv müddət: %duration%"
+  duration-forever: "&#A0A0A0həmişə aktiv"
+  duration-expired: "&#FF6B6Bbitib"
+  duration-remaining: "&#3FFF5C%time% qalıb"
+  cooldown-none: "&#888888yoxdur"
+  unlimited: "&#888888limitsiz"
+  console-commands-header: "&#A0A0A0Console əmrləri:"
+  console-commands-empty: "&#888888 (boşdur)"
+  console-commands-entry: "&#888888 [%index%] &f%command%"
+  broadcast-header: "&#A0A0A0Broadcast sətrləri:"
+  broadcast-empty: "&#888888 (heç biri - səssiz)"
+  broadcast-entry: "&#888888 [%index%] &f%message%"
+  footer: "&8&m                                                 "
+
+list:
+  empty: "&#A0A0A0Hələ heç bir xüsusi komanda yaradılmayıb."
+  header: "<gradient:#3FFF5C:#5CC8FF>&lYaradılmış xüsusi komandalar</gradient> &#A0A0A0(&#FFE45C%count%&#A0A0A0):"
+  entry: "&#888888 ▸ &#FFE45C/%command% &#A0A0A0(%status%&#A0A0A0)"
+
+command:
+  no-permission: "&#FF6B6BBu komandanı istifadə etmək üçün icazən yoxdur."
+  success:
+    - "&#3FFF5C&l✔ &r&#3FFF5CTəbriklər! Mükafatın hesabına əlavə olundu."
+  already-used:
+    - "&#FF6B6B&l✘ &r&#FF6B6BSən bu komandanı artıq istifadə etmisən."
+  limit-reached:
+    - "&#FF6B6B&l✘ &r&#FF6B6BBu kampaniyanın istifadə limiti dolub."
+  expired:
+    - "&#FF6B6B&l✘ &r&#FF6B6BBu komandanın istifadə müddəti bitib."
+  cooldown:
+    - "&#FFE45C⏳ &#A0A0A0Yenidən istifadə üçün gözləməlisən: &#FFE45C%time_left%"
+  disabled:
+    - "&#FF6B6B&l✘ &r&#FF6B6BBu komanda hazırda deaktivdir."
+
+# Discord webhook embed mətnləri.
+# Discord rəng kodlarını render etmir, ona görə burada &-kodları yoxdur.
+# field-broadcast -> broadcast sətrləri (rənglər təmizlənmiş plain text)
+# field-commands  -> icra olunan console əmrlərinin siyahısı (kod bloku)
+# Hər hansı label-ı boş qoymaq həmin sahəni embed-dən gizlədir.
+discord:
+  embed:
+    title: "Xüsusi komanda istifadə edildi"
+    description: "**%player_name%** indicə `/%command%` istifadə etdi."
+    field-player: "Oyunçu"
+    field-command: "Komanda"
+    field-time: "İstifadə vaxtı"
+    field-broadcast: "Broadcast"
+    field-commands: "İcra olunan əmrlər"
+    field-remaining: "Qalan istifadə sayı"
+    # Aşağıdakı sətrlər "Qalan istifadə sayı" sahəsinə birləşdirilir.
+    # Yalnız limiti təyin edilmiş olanlar göstərilir (>0). Sətri ""
+    # etmək həmin sətri gizlədir, field-remaining label-ı boşaltmaq
+    # bütün sahəni gizlədir.
+    remaining-total: "Server üzrə: **%remaining%** / %limit% qalıb (%used% istifadə)"
+    remaining-player: "%player_name%: **%remaining%** / %limit% qalıb"
+    footer: "AkifsCustomCommands"
+    time-format: "yyyy-MM-dd HH:mm:ss z"

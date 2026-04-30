@@ -1,0 +1,69 @@
+# =============================================================
+#  AkifsCustomCommands - Custom command definitions
+# =============================================================
+#  This file holds every custom reward command you create. Use
+#  /cac create <name> in-game to add new ones automatically, or
+#  edit them by hand below and run /cac reload.
+#
+#  Available fields:
+#    enabled                 -> Toggle the command on/off
+#    permission              -> Empty = everyone can use it
+#    permission-message-key  -> Key of message in the language file
+#                               (default: "command.no-permission")
+#    usage-limit-total       -> Global usage limit (-1 = unlimited)
+#    usage-limit-per-player  -> Per-player usage limit (-1 = unlimited)
+#    cooldown-seconds        -> Cooldown per player (0 = disabled)
+#    active-time-seconds     -> Command lifetime (0 = forever)
+#    created-at              -> Filled automatically (epoch seconds)
+#    console-commands        -> Commands executed by the console
+#    broadcast               -> Lines that are broadcast to every
+#                               online player after a successful use.
+#                               Empty list = silent (only the runner
+#                               sees the success message).
+#                               These same lines are also forwarded
+#                               (with color codes stripped) to Discord
+#                               if the webhook is enabled in config.yml.
+#    messages                -> Optional per-command overrides for
+#                               success / cooldown / disabled / etc.
+#                               If a key is missing the language file
+#                               default is used.
+#
+#  Supported placeholders inside console-commands, broadcasts and messages:
+#    %player_name%        - the player who ran the command
+#    %player_uuid%        - the player's UUID
+#    %player_displayname% - the player's display name
+#    %command%            - name of the custom command
+#    %time_left%          - cooldown remaining (only in cooldown msg)
+#
+#  Three color systems are supported (1.16+):
+#    1. Legacy codes:  &a, &c, &l, &n ...
+#    2. Hex codes:     &#RRGGBB
+#    3. Gradients:     <gradient:#RRGGBB:#RRGGBB>text</gradient>
+# =============================================================
+
+commands:
+  freevip:
+    enabled: true
+    permission: ""
+    permission-message-key: "command.no-permission"
+    usage-limit-total: 10
+    usage-limit-per-player: 1
+    cooldown-seconds: 86400
+    active-time-seconds: 86400
+    created-at: 0
+    console-commands:
+      - "lp user %player_name% parent addtemp vip 7d"
+      - "eco give %player_name% 1000"
+    # These lines are sent to every online player after the command
+    # is run successfully. Leave the list empty to keep the command
+    # silent (only the player who ran it will see the success message).
+    broadcast:
+      - "&8&m                                                 "
+      - "&r <gradient:#3FFF5C:#5CC8FF>&l%player_name%</gradient> &#A0A0A0used &#FFE45C/%command% &#A0A0A0and earned <gradient:#FFE45C:#FF6B6B>&l7 days of VIP</gradient>&#A0A0A0!"
+      - "&r &#A0A0A0Type &#FFE45C/%command% &#A0A0A0to grab one too while it lasts."
+      - "&8&m                                                 "
+    # Optional per-command overrides. Anything not listed here
+    # falls back to the language file (languages/en.yml).
+    messages:
+      success:
+        - "&#3FFF5C&l✔ &r&#3FFF5CCongratulations! You earned a 7-day free VIP."

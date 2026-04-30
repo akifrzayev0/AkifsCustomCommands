@@ -1,0 +1,185 @@
+﻿# =============================================================
+#  AkifsCustomCommands - English language file
+# =============================================================
+#  Every user-facing string lives here. Copy this file to e.g.
+#  languages/de.yml or languages/fr.yml to add a translation,
+#  then set "language: de" in config.yml.
+#
+#  Color codes:
+#    Legacy:  &a, &c, &6, &l, &n ...
+#    Hex:     &#RRGGBB        (1.16+)
+#
+#  Suggested palette (used by these defaults):
+#    Accent / brand    &#3FFF5C
+#    Highlight         &#FFE45C
+#    Soft text         &#A0A0A0
+#    Error red         &#FF6B6B
+#    Cool blue         &#5CC8FF
+#    Purple            &#B57BFF
+#
+#  Placeholders inside command-related messages:
+#    %player_name%, %player_uuid%, %player_displayname%
+#    %command%, %used%, %limit%, %total_used%, %total_limit%
+#    %time_left% (cooldown only)
+# =============================================================
+
+# -------------------------------------------------------------
+#  Generic admin / plugin messages
+# -------------------------------------------------------------
+admin:
+  help-hint: "&#A0A0A0Type &#FFE45C/cac help &#A0A0A0to see every available command."
+  no-permission: "&#FF6B6BYou don't have permission to use this command."
+  player-only: "&#FF6B6BThis command can only be used by a player."
+  unknown-subcommand: "&#FF6B6BUnknown subcommand. Try &#FFE45C/cac help&#FF6B6B."
+  command-not-found: "&#FF6B6BNo custom command named &#FFE45C%command% &#FF6B6Bwas found."
+  command-already-exists: "&#FF6B6BA custom command with that name already exists: &#FFE45C%command%"
+  command-created: "&#3FFF5CCustom command created: &#FFE45C/%command%"
+  command-deleted: "&#3FFF5CCustom command deleted: &#FFE45C%command%"
+  command-enabled: "&#3FFF5CCustom command enabled: &#FFE45C%command%"
+  command-disabled: "&#FFE45CCustom command disabled: &#FFE45C%command%"
+  command-reset: "&#3FFF5CAll usage data was cleared for: &#FFE45C%command%"
+  player-reset: "&#3FFF5C%player%&#3FFF5C's data for &#FFE45C%command% &#3FFF5Cwas cleared."
+  console-cmd-added: "&#3FFF5CA new console command was added to &#FFE45C%command%&#3FFF5C."
+  console-cmd-removed: "&#3FFF5CThe selected console command was removed."
+  broadcast-added: "&#3FFF5CA new broadcast line was added to &#FFE45C%command%&#3FFF5C."
+  broadcast-removed: "&#3FFF5CThe selected broadcast line was removed."
+  broadcast-cleared: "&#3FFF5CAll broadcast lines were cleared from &#FFE45C%command%&#3FFF5C."
+  invalid-index: "&#FF6B6BInvalid index. There is no entry at that position."
+  invalid-number: "&#FF6B6BPlease provide a valid number."
+  invalid-name: "&#FF6B6BCommand names may only contain letters, numbers and underscores."
+  reload-success: "&#3FFF5CConfiguration and data files were reloaded successfully."
+  language-loaded: "&#3FFF5CLanguage file loaded: &#FFE45C%language%.yml"
+  limit-set: "&#3FFF5C%command% &#3FFF5Ctotal usage limit set to &#FFE45C%amount%&#3FFF5C."
+  player-limit-set: "&#3FFF5C%command% &#3FFF5Cper-player limit set to &#FFE45C%amount%&#3FFF5C."
+  cooldown-set: "&#3FFF5C%command% &#3FFF5Ccooldown set to &#FFE45C%duration%&#3FFF5C."
+  duration-set: "&#3FFF5C%command% &#3FFF5Cactive lifetime set to &#FFE45C%duration%&#3FFF5C."
+  permission-set: "&#3FFF5C%command% &#3FFF5Crequired permission set to &#FFE45C%permission%&#3FFF5C."
+  permission-cleared: "&#3FFF5C%command% &#3FFF5Cno longer requires any permission."
+  webhook-disabled: "&#FF6B6BDiscord webhook is disabled. Set &#FFE45Cdiscord.enabled: true &#FF6B6Bin config.yml."
+  webhook-not-configured: "&#FF6B6BDiscord webhook URL is empty. Set it in &#FFE45Cconfig.yml &#FF6B6Bunder &#FFE45Cdiscord.webhook-url&#FF6B6B."
+  webhook-test-sent: "&#3FFF5CTest webhook for &#FFE45C%command% &#3FFF5Cwas dispatched."
+  webhook-failed: "&#FF6B6BWebhook delivery failed: &#FFE45C%error%"
+
+# -------------------------------------------------------------
+#  /cac help screen
+# -------------------------------------------------------------
+help:
+  - "&8&m                                                 "
+  - "&r <gradient:#3FFF5C:#5CC8FF>&lAkifsCustomCommands</gradient> &#A0A0A0— &fAdmin panel"
+  - "&8&m                                                 "
+  - "&#FFE45C/cac help &#A0A0A0— Show this help"
+  - "&#FFE45C/cac reload &#A0A0A0— Reload config and data"
+  - "&#FFE45C/cac list &#A0A0A0— List every custom command"
+  - "&#FFE45C/cac info <command> &#A0A0A0— Show command details"
+  - "&#FFE45C/cac create <command> &#A0A0A0— Create a new custom command"
+  - "&#FFE45C/cac delete <command> &#A0A0A0— Delete a custom command"
+  - "&#FFE45C/cac enable|disable <command> &#A0A0A0— Toggle a command"
+  - "&#FFE45C/cac reset <command> &#A0A0A0— Reset usage data for a command"
+  - "&#FFE45C/cac resetplayer <player> <command> &#A0A0A0— Reset one player's data"
+  - "&#FFE45C/cac addcmd <command> <console-cmd> &#A0A0A0— Add a console command"
+  - "&#FFE45C/cac removecmd <command> <index> &#A0A0A0— Remove a console command"
+  - "&#FFE45C/cac addbcast <command> <message> &#A0A0A0— Add a public broadcast line"
+  - "&#FFE45C/cac removebcast <command> <index> &#A0A0A0— Remove a broadcast line"
+  - "&#FFE45C/cac clearbcast <command> &#A0A0A0— Remove all broadcast lines"
+  - "&#FFE45C/cac setlimit <command> <amount> &#A0A0A0— Total usage limit"
+  - "&#FFE45C/cac setplayerlimit <command> <amount> &#A0A0A0— Per-player limit"
+  - "&#FFE45C/cac setcooldown <command> <time> &#A0A0A0— Cooldown (e.g. &f30s, 5m, 1h, 7d&#A0A0A0)"
+  - "&#FFE45C/cac setduration <command> <time> &#A0A0A0— Active lifetime (e.g. &f1h, 7d, 30d&#A0A0A0)"
+  - "&#FFE45C/cac setperm <command> [permission] &#A0A0A0— Set or clear required permission"
+  - "&#FFE45C/cac testwebhook <command> [player] &#A0A0A0— Send a test embed to Discord"
+  - "&8&m                                                 "
+
+# -------------------------------------------------------------
+#  /cac info screen
+# -------------------------------------------------------------
+info:
+  header: "&8&m                                                 "
+  command-line: "<gradient:#3FFF5C:#5CC8FF>&lCommand:</gradient> &#FFE45C/%command%"
+  status-line: "&#A0A0A0Status: %status%"
+  status-enabled: "&#3FFF5C&lenabled"
+  status-disabled: "&#FF6B6B&ldisabled"
+  status-expired: "&#888888expired"
+  permission-line: "&#A0A0A0Permission: &f%permission%"
+  permission-none: "&#888888(none)"
+  total-usage-line: "&#A0A0A0Total uses: &f%used% &#888888/ &f%limit%"
+  player-limit-line: "&#A0A0A0Per-player limit: &f%limit%"
+  cooldown-line: "&#A0A0A0Cooldown: &f%cooldown%"
+  duration-line: "&#A0A0A0Active time: %duration%"
+  duration-forever: "&#A0A0A0always active"
+  duration-expired: "&#FF6B6Bexpired"
+  duration-remaining: "&#3FFF5C%time% remaining"
+  cooldown-none: "&#888888none"
+  unlimited: "&#888888unlimited"
+  console-commands-header: "&#A0A0A0Console commands:"
+  console-commands-empty: "&#888888 (empty)"
+  console-commands-entry: "&#888888 [%index%] &f%command%"
+  broadcast-header: "&#A0A0A0Broadcast lines:"
+  broadcast-empty: "&#888888 (none - silent)"
+  broadcast-entry: "&#888888 [%index%] &f%message%"
+  footer: "&8&m                                                 "
+
+# -------------------------------------------------------------
+#  /cac list screen
+# -------------------------------------------------------------
+list:
+  empty: "&#A0A0A0No custom commands have been created yet."
+  header: "<gradient:#3FFF5C:#5CC8FF>&lCustom commands</gradient> &#A0A0A0(&#FFE45C%count%&#A0A0A0):"
+  entry: "&#888888 ▸ &#FFE45C/%command% &#A0A0A0(%status%&#A0A0A0)"
+
+# -------------------------------------------------------------
+#  Default per-command messages.
+#  These are used whenever a command in config.yml does NOT
+#  define its own "messages.<key>" override.
+# -------------------------------------------------------------
+command:
+  no-permission: "&#FF6B6BYou don't have permission to use this command."
+  success:
+    - "&#3FFF5C&l✔ &r&#3FFF5CCongratulations! Your reward has been delivered."
+  already-used:
+    - "&#FF6B6B&l✘ &r&#FF6B6BYou have already used this command."
+  limit-reached:
+    - "&#FF6B6B&l✘ &r&#FF6B6BThis campaign has reached its usage limit."
+  expired:
+    - "&#FF6B6B&l✘ &r&#FF6B6BThis command is no longer active."
+  cooldown:
+    - "&#FFE45C⏳ &#A0A0A0You must wait &#FFE45C%time_left% &#A0A0A0before using this command again."
+  disabled:
+    - "&#FF6B6B&l✘ &r&#FF6B6BThis command is currently disabled."
+
+# -------------------------------------------------------------
+#  Discord webhook embed
+# -------------------------------------------------------------
+#  Logs every successful custom-command use to the configured
+#  webhook (see config.yml -> discord). Color codes are NOT
+#  rendered by Discord, so do not use &-codes here.
+#
+#  Embed contents:
+#    field-broadcast -> the public broadcast lines, with all
+#                       in-game color codes removed (plain text).
+#    field-commands  -> the console commands that were executed
+#                       (formatted as a code block).
+#  Leave a label empty (e.g. field-commands: "") to hide that
+#  field from the embed.
+#
+#  Placeholders: %player_name%, %player_uuid%, %player_displayname%,
+#                %command%, %time%
+#
+#  time-format follows java.text.SimpleDateFormat patterns.
+# -------------------------------------------------------------
+discord:
+  embed:
+    title: "Custom command used"
+    description: "**%player_name%** just used `/%command%`."
+    field-player: "Player"
+    field-command: "Command"
+    field-time: "Used at"
+    field-broadcast: "Broadcast"
+    field-commands: "Executed commands"
+    field-remaining: "Remaining uses"
+    # Lines below are joined into the "Remaining uses" field. Only the
+    # ones whose limit is set (> 0) are shown. Set the line to "" to
+    # hide it, or empty the field-remaining label to hide the field.
+    remaining-total: "Server-wide: **%remaining%** of %limit% left (%used% used)"
+    remaining-player: "%player_name%: **%remaining%** of %limit% left"
+    footer: "AkifsCustomCommands"
+    time-format: "yyyy-MM-dd HH:mm:ss z"
